@@ -17,7 +17,7 @@ $sukunimi = mysqli_real_escape_string($con, filter_input(INPUT_POST,'sukunimi',F
 $opintojaksonKoodi = mysqli_real_escape_string($con,filter_input(INPUT_POST,'ojkoodi',FILTER_SANITIZE_STRING));
 $arvosana = mysqli_real_escape_string($con, filter_input(INPUT_POST,'arvosana',FILTER_SANITIZE_STRING));
 
-$sql = "CALL PROCEDURE UusiSuoritus('$etunimi', '$sukunimi', '$opintojaksonKoodi', '$arvosana')";
+$sql = "CALL UusiSuoritus('$etunimi', '$sukunimi', '$opintojaksonKoodi', '$arvosana')";
 
 if (!mysqli_query($con, $sql))
 {
