@@ -12,10 +12,10 @@
         echo "Failed to connect MySQL! Error: " . myslqi_connect_error(); 
     }
 
-    $etunimi = mysqli_real_escape_string($con, filter_input(INPUT_POST,'etunimi',FILTER_SANITIZE_STRING));
-    $sukunimi = mysqli_real_escape_string($con, filter_input(INPUT_POST,'sukunimi',FILTER_SANITIZE_STRING));
-    $opintojaksonKoodi = mysqli_real_escape_string($con,filter_input(INPUT_POST,'ojkoodi',FILTER_SANITIZE_STRING));
-    $arvosana = mysqli_real_escape_string($con, filter_input(INPUT_POST,'arvosana',FILTER_SANITIZE_STRING));
+    $etunimi = mysqli_real_escape_string($con, filter_input(INPUT_POST,'etun',FILTER_SANITIZE_STRING));
+    $sukunimi = mysqli_real_escape_string($con, filter_input(INPUT_POST,'sukun',FILTER_SANITIZE_STRING));
+    $opintojaksonKoodi = mysqli_real_escape_string($con,filter_input(INPUT_POST,'oj',FILTER_SANITIZE_STRING));
+    $arvosana = mysqli_real_escape_string($con, filter_input(INPUT_POST,'as',FILTER_SANITIZE_STRING));
 
     $sql = "CALL UusiSuoritus('$etunimi', '$sukunimi', '$opintojaksonKoodi', '$arvosana')";
 
