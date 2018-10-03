@@ -5,7 +5,7 @@ $dbname = 't7aaju00';
 $username = 't7aaju00';
 $password = 'salasana';
 
-$con = myslqi_connect($host, $username, $password, $dbname)
+$con = myslqi_connect($host, $username, $password, $dbname);
 
 if (myslqi_connect_errno())
 {
