@@ -14,10 +14,10 @@ if (myslqi_connect_errno())
 
 $etunimi = mysqli_real_escape_string($con, $_POST['etunimi']);
 $sukunimi = mysqli_real_escape_string($con, $_POST['sukunimi']);;
-$opintojaksonNimi = mysqli_real_escape_string($con, $_POST['ojnimi']);
+$opintojaksonKoodi = mysqli_real_escape_string($con, $_POST['ojkoodi']);
 $arvosana = mysqli_real_escape_string($con, $_POST['arvosana']);
 
-$sql = "CALL PROCEDURE UusiSuoritus('$etunimi', '$sukunimi', '$opintojaksonNimi', '$arvosana')";
+$sql = "CALL PROCEDURE UusiSuoritus('$etunimi', '$sukunimi', '$opintojaksonKoodi', '$arvosana')";
 
 if (!mysqli_query($con, $sql))
 {
