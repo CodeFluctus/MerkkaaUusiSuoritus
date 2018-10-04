@@ -5,9 +5,9 @@
     $username = 't7aaju00';
     $password = 'salasana';
 
-    $con = myslqi_connect($host, $username, $password, $dbname);
+    $con = mysqli_connect($host, $username, $password, $dbname);
 
-    if (myslqi_connect_errno())
+    if (mysqli_connect_errno())
     {
         echo "Failed to connect MySQL! Error: " . myslqi_connect_error(); 
     }
